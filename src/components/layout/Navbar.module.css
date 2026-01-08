@@ -1,0 +1,97 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.scrolled {
+    height: 70px;
+    border-bottom-color: var(--border-color);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-family: var(--font-outfit);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.desktopNav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navLink {
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+
+.navLink:hover {
+    color: var(--accent-primary);
+}
+
+.mobileActions {
+    display: none;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menuBtn {
+    color: var(--text-primary);
+}
+
+.mobileNav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    animation: slideDown 0.3s ease-out;
+}
+
+.mobileNavLink {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .desktopNav {
+        display: none;
+    }
+
+    .mobileActions {
+        display: flex;
+    }
+}

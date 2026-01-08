@@ -1,0 +1,83 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+}
+
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2001;
+    pointer-events: none;
+    padding: 1.5rem;
+}
+
+.modal {
+    pointer-events: auto;
+    width: 100%;
+    max-width: 450px;
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    position: relative;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+}
+
+.closeBtn {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+
+.closeBtn:hover {
+    color: var(--text-primary);
+}
+
+.iconWrapper {
+    width: 100px;
+    height: 100px;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+}
+
+.icon {
+    color: var(--accent-secondary);
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+    .modal {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+}
